@@ -1,7 +1,5 @@
 package com.app.haetssal_jangteo.repository;
 
-import com.app.haetssal_jangteo.common.pagination.Criteria;
-import com.app.haetssal_jangteo.common.search.Search;
 import com.app.haetssal_jangteo.domain.StoreVO;
 import com.app.haetssal_jangteo.dto.StoreDTO;
 import com.app.haetssal_jangteo.mapper.StoreMapper;
@@ -38,12 +36,12 @@ public class StoreDAO {
     }
 
     // 전체 가게 조회
-    public List<StoreDTO> findAll() {
+    public List<StoreVO> findAll() {
         return storeMapper.selectAll();
     }
 
     // 장터 id로 소속 가게들 조회
-    public List<StoreDTO> findStoresByMarketId(Long marketId) {
+    public List<StoreVO> findStoresByMarketId(Long marketId) {
         return storeMapper.selectByMarketId(marketId);
     }
 
@@ -60,11 +58,6 @@ public class StoreDAO {
     // 가게 소유주 id로 조회
     public Optional<StoreVO> findByStoreOwnerId(Long ownerId) {
         return storeMapper.selectByStoreOwnerId(ownerId);
-    }
-
-    // 검색 값에 따라 가게 조회
-    public List<StoreDTO> findBySearch(Criteria criteria, Search search) {
-        return storeMapper.selectBySearch(criteria, search);
     }
 
     // 가게 비활성화

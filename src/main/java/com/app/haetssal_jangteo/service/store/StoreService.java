@@ -2,8 +2,6 @@ package com.app.haetssal_jangteo.service.store;
 
 import com.app.haetssal_jangteo.common.enumeration.Filetype;
 import com.app.haetssal_jangteo.common.exception.FileNotFoundException;
-import com.app.haetssal_jangteo.common.pagination.Criteria;
-import com.app.haetssal_jangteo.common.search.Search;
 import com.app.haetssal_jangteo.domain.FileVO;
 import com.app.haetssal_jangteo.domain.StoreVO;
 import com.app.haetssal_jangteo.dto.FileDTO;
@@ -131,14 +129,9 @@ public class StoreService {
     }
 
     // 가게 전체 조회
-    public List<StoreDTO> findAll() {
-        return storeDAO.findAll();
-    }
-
-    // 검색으로 가게 조회
-    public List<StoreDTO> findBySearch(Criteria criteria, Search search) {
-        return storeDAO.findBySearch(criteria, search);
-    }
+//    public List<StoreDTO> findAll() {
+//        storeDAO.findAll()
+//    }
 
     // 장터 id로 소속 가게들 조회
 
