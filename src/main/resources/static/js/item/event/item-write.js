@@ -78,7 +78,7 @@ itemNameInput.addEventListener("input", (e) => {
 });
 
 // 상품 카테고리 Event
-itemCategory.addEventListener("click", (e) => {
+itemCategory.addEventListener("click", async (e) => {
     const categoryList = categoryA.querySelectorAll(
         ".each-category-item.item-a",
     );
